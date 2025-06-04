@@ -3,48 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BK's world</title>
+    <title>Seasun Biomaterials - HCR-Based Spatial Omics Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background-color: white;
         }
-        header {
-            background-color: #f4f4f4;
-            padding: 1rem;
-            text-align: center;
+        .gradient-blue {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
         }
-        main {
-            margin-top: 20px;
+        .text-seasun-blue {
+            color: #1E40AF;
         }
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.8rem;
+        .bg-seasun-blue {
+            background-color: #1E40AF;
+        }
+        .text-seasun-grey {
+            color: #6B7280;
+        }
+        .bg-seasun-grey {
+            background-color: #F3F4F6;
+        }
+        .hover-transform {
+            transition: transform 0.3s ease;
+        }
+        .hover-transform:hover {
+            transform: translateY(-5px);
+        }
+        .image-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        @media print {
+            body { 
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            .no-print { display: none; }
+            .page-container { 
+                max-width: none;
+                margin: 0;
+                padding: 20px;
+            }
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Welcome to BK's world</h1>
-    </header>
-    <main>
-        <h2>About Me</h2>
-        <p>Hello! This is my personal website hosted on GitHub Pages. Here, I'll share information about my projects, interests, and experiences.</p>
-        <h2>My Projects</h2>
-        <ul>
-            <li>Single-cell Omics: Research on single-cell technologies and their applications.</li>
-            <li>DNA Methylation: Investigating epigenetic changes and DNA methylation patterns.</li>
-            <li>Development: Studying biological development processes.</li>
-            <li>Regeneration: Exploring regenerative biology and tissue regeneration.</li>
-        </ul>
-    </main>
-    <footer>
-        <p>&copy; 2024 BK Min. Hosted on GitHub Pages.</p>
-    </footer>
+<body class="bg-white">
+    <div class="page-container max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-gray-200 py-4 px-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-seasun-blue rounded-lg flex items-center justify-center">
+                        <i class="fas fa-dna text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-seasun-blue">SEASUN</h1>
+                        <p class="text-sm text-seasun-grey">BIOMATERIALS</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#technology" class="text-seasun-grey hover:text-seasun-blue transition-colors">Technology</a>
+                    <a href="#advantages" class="text-seasun-grey hover:text-seasun-blue transition-colors">Advantages</a>
+                    <a href="#applications" class="text-seasun-grey hover:text-seasun-blue transition-colors">Applications</a>
+                    <a href="#contact" class="text-seasun-grey hover:text-seasun-blue transition-colors">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="gradient-blue text-white py-16 px-6">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    Revolutionary HCR-Based<br>Spatial Omics Technology
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Single Cell Resolution with Peptide Nucleic Acids
+                </p>
+                <div class="flex flex-wrap justify-center gap-6 text-lg">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        Highly Specific Detection
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-target mr-2"></i>
+                        Low Off-Target Effects
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-microscope mr-2"></i>
+                        Cancer Detection Excellence
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Overview -->
+        <section id="technology" class="py-16 px-6">
+            <h2 class="text-3xl font-bold text-seasun-blue text-center mb-12">Our Technology</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-semibold text-seasun-blue mb-6">HCR-Based Spatial Omics</h3>
+                    <p class="text-seasun-grey mb-6 leading-relaxed">
+                        Our innovative approach combines Hybridization Chain Reaction (HCR) amplification with peptide nucleic acids (PNAs) to achieve unprecedented single-cell spatial resolution. This breakthrough technology enables highly specific detection of molecular targets within tissue contexts.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-atom text-seasun-blue mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Peptide Nucleic Acids</h4>
+                                <p class="text-seasun-grey text-sm">Superior binding affinity and stability compared to traditional DNA probes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-link text-seasun-blue mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">HCR Amplification</h4>
+                                <p class="text-seasun-grey text-sm">Signal amplification without enzymatic reactions for enhanced sensitivity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1186%2Fs13059-022-02824-6/MediaObjects/13059_2022_2824_Fig1_HTML.png" 
+                         alt="Spatial Omics Technologies Overview" 
+                         class="w-full h-auto">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="image-container order-2 md:order-1">
+                    <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.4611/MediaObjects/41592_2018_Article_BFnmeth4611_Fig1_HTML.jpg" 
+                         alt="HCR Mechanism and Workflow" 
+                         class="w-full h-auto">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-2xl font-semibold text-seasun-blue mb-6">Precision Detection Mechanism</h3>
+                    <p class="text-seasun-grey mb-6 leading-relaxed">
+                        Our HCR-based approach utilizes carefully designed hairpin probes that remain kinetically trapped until activated by specific target sequences. This ensures minimal background noise and exceptional specificity in complex tissue environments.
+                    </p>
+                    <div class="bg-seasun-grey p-6 rounded-lg">
+                        <h4 class="font-semibold text-gray-800 mb-3">Key Technical Features:</h4>
+                        <ul class="space-y-2 text-seasun-grey">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Isothermal amplification process</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Multiplexed target detection</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Preserved tissue morphology</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Quantitative signal output</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Advantages -->
+        <section id="advantages" class="bg-seasun-grey py-16 px-6">
+            <h2 class="text-3xl font-bold text-seasun-blue text-center mb-12">Competitive Advantages</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-transform">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-seasun-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">High Specificity</h3>
+                    <p class="text-seasun-grey">
+                        Peptide nucleic acids provide superior target binding specificity, reducing cross-reactivity and false positive signals.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-transform">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Low Off-Target Effects</h3>
+                    <p class="text-seasun-grey">
+                        Engineered probe design minimizes non-specific binding, ensuring clean and reliable detection results.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-transform">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search-plus text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Enhanced Sensitivity</h3>
+                    <p class="text-seasun-grey">
+                        HCR amplification provides robust signal enhancement while maintaining spatial resolution integrity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="inline-flex items-center bg-white px-8 py-4 rounded-lg shadow-lg">
+                    <img src="https://sites.bu.edu/biomol/files/2013/07/PNA-DNA-e1374170666951.png" 
+                         alt="PNA vs DNA Structure Comparison" 
+                         class="w-32 h-auto mr-6">
+                    <div class="text-left">
+                        <h4 class="font-semibold text-gray-800 mb-2">PNA Structural Advantage</h4>
+                        <p class="text-seasun-grey text-sm">
+                            Neutral backbone eliminates electrostatic repulsion,<br>
+                            enabling stronger and more specific hybridization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications -->
+        <section id="applications" class="py-16 px-6">
+            <h2 class="text-3xl font-bold text-seasun-blue text-center mb-12">Applications</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-heartbeat text-red-500 text-3xl mr-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-800">Cancer Detection</h3>
+                    </div>
+                    <img src="https://www.cell.com/cms/10.1016/j.cell.2024.07.040/asset/7e668444-ec3f-487c-bf06-317a1f8e1752/main.assets/gr3_lrg.jpg" 
+                         alt="Spatiotemporal Omics in Cancer Research" 
+                         class="w-full h-48 object-cover rounded-lg mb-6">
+                    <p class="text-seasun-grey mb-4">
+                        Enable precise identification of cancer biomarkers with spatial context, supporting early detection and personalized treatment strategies.
+                    </p>
+                    <ul class="space-y-2 text-seasun-grey">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tumor heterogeneity analysis</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Metastasis pathway mapping</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Therapeutic target identification</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-layer-group text-blue-500 text-3xl mr-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-800">Regional Tissue Diversity</h3>
+                    </div>
+                    <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41576-021-00370-8/MediaObjects/41576_2021_370_Fig1_HTML.png" 
+                         alt="Single Cell Spatial Transcriptomics" 
+                         class="w-full h-48 object-cover rounded-lg mb-6">
+                    <p class="text-seasun-grey mb-4">
+                        Characterize molecular heterogeneity across different tissue regions, revealing cellular communication networks and functional domains.
+                    </p>
+                    <ul class="space-y-2 text-seasun-grey">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Cell-cell interaction mapping</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Developmental biology insights</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Disease progression tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications -->
+        <section class="bg-seasun-grey py-16 px-6">
+            <h2 class="text-3xl font-bold text-seasun-blue text-center mb-12">Technical Capabilities</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h4 class="font-semibold text-gray-800 mb-4">Detection Parameters</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Spatial Resolution:</span>
+                                <span class="font-medium">Single Cell Level</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Sensitivity:</span>
+                                <span class="font-medium">High Dynamic Range</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Multiplexing:</span>
+                                <span class="font-medium">Multi-target Compatible</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Processing Time:</span>
+                                <span class="font-medium">Optimized Protocol</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h4 class="font-semibold text-gray-800 mb-4">Sample Compatibility</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Tissue Types:</span>
+                                <span class="font-medium">FFPE & Fresh Frozen</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Sample Size:</span>
+                                <span class="font-medium">Flexible Format</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Storage:</span>
+                                <span class="font-medium">Standard Conditions</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-seasun-grey">Throughput:</span>
+                                <span class="font-medium">Scalable Workflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-seasun-blue mb-8">Partner with Seasun Biomaterials</h2>
+                <p class="text-xl text-seasun-grey mb-12">
+                    Discover how our HCR-based spatial omics technology can advance your research and clinical applications.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-seasun-blue text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Email Us</h4>
+                        <p class="text-seasun-grey">info@seasunbio.com</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-seasun-blue text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Call Us</h4>
+                        <p class="text-seasun-grey">+1 (555) 123-4567</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar text-seasun-blue text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Schedule Demo</h4>
+                        <p class="text-seasun-grey">Book a consultation</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Revolutionize Your Research?</h3>
+                    <p class="text-lg opacity-90 mb-6">
+                        Contact our team to learn more about implementing our spatial omics solutions in your laboratory.
+                    </p>
+                    <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Request Information
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8 px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-dna text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">SEASUN BIOMATERIALS</h4>
+                            <p class="text-sm text-gray-400">Advanced Spatial Omics Solutions</p>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-400 text-sm">© 2024 Seasun Biomaterials. All rights reserved.</p>
+                        <p class="text-gray-400 text-sm">Leading innovation in spatial omics technology</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
